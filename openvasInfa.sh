@@ -88,15 +88,7 @@ done
 
 formatID="c402cc3e-b531-11e1-9163-406186ea4fc5" #PDF Format
 fetchReport=`omp -u $openvas_username -w $openvas_password -iX "<get_reports report_id='$reportID' format_id='$formatID'/>"`
-echo $fetchReport
+echo $fetchReport > ./temp/response.txt
 
-# Step6: Parse XML and get base64 encoded data
-rdom () { local IFS=\> ; read -d \< E C ;} #Function to parse XML
-while rdom; do
-    if [[ $E = "report" ]]; then
-        echo $C
-        exit
-    fi
-done < "$fetchReport" > base64PDF.txt
-base64 -d base64PDF.txt > "$ip.pdf"
-
+# Step6: Parse Data and save it to PDF
+python parseResponseAndSaveFile.py $scan_name
