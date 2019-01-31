@@ -1,7 +1,7 @@
 # Openvas-Automation
 The instructions provide a simpler way to install and run openvas docker container. The script automates the process of scanning a host provided with (IP, SSH Username and SSH Password). This automatically generates the report for further analysis. It can be easily integrated in CI pipeline provided the report analysis has to be done manually. Future implementation contain providing a REST api wrapper around the script and use Vulnerability Scanning As A Service Feature
 
-<b><u><h2>Automated Authenticated Vulnerability Assessment using Openvas<h2></u></b>
+<b><u><h2>Automated Authenticated Vulnerability Assessment using Openvas</h2></u></b>
 
 <b>Installation:</b><br>
 <b>1.	Docker should be installed</b><br> 
