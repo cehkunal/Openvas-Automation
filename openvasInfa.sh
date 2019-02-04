@@ -41,7 +41,8 @@ targetID=`echo $targetID | cut -d "\"" -f2`
 #bbca7412-a950-11e3-9109-406186ea4fc5  System Discovery
 
 #scanConfigID="698f691e-7489-11df-9d8c-002264764cea" #Full and Fast Ultimate
-scanConfigID="bbca7412-a950-11e3-9109-406186ea4fc5" #System Discovery
+#scanConfigID="bbca7412-a950-11e3-9109-406186ea4fc5" #System Discovery
+scanConfigID="#74db13d6-7489-11df-91b9-002264764cea" #Full and very deep ultimate
 
 taskID=`omp -u $openvas_username -w $openvas_password -iX "<CREATE_TASK><name>$scan_name</name><Comment>Deep Scan on $ip</Comment><target id='$targetID'/><config id='$scanConfigID'/></CREATE_TASK>"`
 taskID=`echo $taskID | cut -d "\"" -f2`
